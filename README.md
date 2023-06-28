@@ -35,3 +35,15 @@ Once you have added MHTri as a game to your dolphin emulator, its time to establ
 - Close out of "Start with Riivolution Patches..." window DONT CLICK START and ensure a new game appears with the title you entered
 - Everytime you want to launch the game to play on LocLac servers, select "MH3SP SERVER"  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/mh3sp-server.PNG)
+
+## Using a DS4 Controller
+Included in the Google Drive is a configuration file for the controller layout I use titled `MH Tri.ini`  
+This is intended to be used with a DualShock 4 (PS4) controller and mimics the button layout of the classic Wii controller.  
+Place this file in the path `C:\Users\(user)\Documents\Dolphin Emulator\Config\Profiles\Wiimote`  
+If some of the folders do not appear (namely `Profiles` and `Wiimote`) go ahead and create them.
+To use this config:
+- Open up the Dolphin Emulator
+- Select "Controllers" at the top right
+- Select "Configure" under the Wii Remotes -> Wii Remote 1
+- With the controller plugged in, select the Profile dropdown and select `MH Tri`
+- Select "Load" and your controller should be working perfectly
