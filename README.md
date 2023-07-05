@@ -47,3 +47,58 @@ To use this config:
 - Select "Configure" under the Wii Remotes -> Wii Remote 1
 - With the controller plugged in, select the Profile dropdown and select `MH Tri`
 - Select "Load" and your controller should be working perfectly
+
+## Essential-ish Configurations and Codes
+
+### Graphics Improvements
+In it's default configuration, Monster Hunter Tri leaves much to be desired aesthetically. Below are a
+few changes that will bolster the graphics of the game.
+
+So, let's take the game from this:  
+![](https://github.com/fawful514/MHTRI/blob/main/screenshots/flfr9%20ss%20for%20comp.PNG)
+
+To this:
+![](https://github.com/fawful514/MHTRI/blob/main/screenshots/Dolphin%20Emulator%20Screenshot%202023.07.04%20-%2018.23.41.87.png)
+
+And make the Sandy Plains actually playable
+![](https://github.com/fawful514/MHTRI/blob/main/screenshots/Dolphin%20Emulator%20Screenshot%202023.07.04%20-%2018.22.01.98.png)
+
+First and foremost, change the graphics engine to Vulkan. To do this:
+- Open Dolphin Emulator -> Graphics -> General -> Select Vulkan from `Backend` dropdown
+- Ensure your aspect ratio is set to `Force 16:9`
+- Next, update the settings on the `Enhancements` tab to match the image shown below. The "Depth" and "Convergence" values are the default values, so you shouldn't have to change them.  
+![](https://github.com/fawful514/MHTRI/blob/main/screenshots/dolphin%20graphics2.PNG)
+
+Now, enable cheats. To do this:
+- Select `Config` in the Dolphin Emulator -> Ensure `Enable Cheats` is ticked
+- I found that un-ticking `Enable Dual Core (speedup)` improves the smoothness of the game  
+
+With cheats enabled, it is time to install the cheats. To do this:
+- Right-click `MH3SP SERVER` in the Dolphin Emulator games list and select `Properties`
+- Under the `Patches` tab, ensure `Bloom OFF` is checked
+
+### Quality of Life Codes
+This section will walk you through how to add and enable Gecko Codes. If you change your mind in the future, simply close out of the current game and un-tick any of the added Gecko Codes you no longer want.  
+The following is a code that will allow you to eat after you have accepted a quest in LocLac (City):
+- Under the `Gecko Codes` tab, select `Add New Code...`
+- Name it "Eat After Quest", paste the following into the `Code:` section, and hit `Save`:
+  ```
+  04324FBC 60000000
+  0420AB8C 60000000
+  ```
+
+This next code is a bit less important. It removes the damage bloat from weapons. In short, what this means is that weapons capable of outputting similar DPS will have similar Attack values. For example, the first `Iron Greatsword` has an Attack of 288, and the first `Iron Sword and Shield` has an Attack of 84. After enabling this, both weapons have an Attack of 60. This is not essential to playing the game, but it makes comparison across weapon types much easier (and you can always disable it later). For more information, I recommend [this](https://www.youtube.com/watch?v=T4mp-WEjPHc) short video
+- Under the `Gecko Codes` tab, add another code. Name it "Raw Debloater", paste this into the `Code:` section, and hit `Save`:
+  ```
+  045DCC50 00000064
+  045DCC54 00000064
+  045DCC58 00000064
+  045DCC5C 00000064
+  045DCC60 00000064
+  045DCC64 00000064
+  045DCC68 00000064
+  045DCC6C 00000064
+  045DCC70 00000064
+  ```
+
+
