@@ -4,55 +4,54 @@ Setup info for accessing MHTri servers via Dolphin Emulator
 Access link to the Google Drive containing all necessary files not found on the referent GitHub page. [Here](https://drive.google.com/drive/u/0/folders/11tHrH_KISdeZ0g7MRWICs7_souEsaWY4)
 ## Installing Dolphin Emulator
 - Download the zip file `Dolphin_Emulator.7z`
-- Unzip to an easy to access location, I used C:\Dolphin\
+- Unzip to an easy to access location, I used `C:\Dolphin\`
 
 ## Installing Monster Hunter Tri
 - Download the zip file `MHTri.7z`
-- Unzip to a new folder in your Dolphin folder C:\Dolphin\Games\
+- Create a new folder in your Dolphin folder `C:\Dolphin\Games\` and unzip to this location
 
 
 ## Running Dolphin Emulator
-- Navigate to the Dolphin-x64 folder C:\Dolphin\Dolphin-x64
-- Run `Dolphin.exe`
-- Double click to set games directory to folder where MHTri is located C:\Dolphin\Games\
+- Navigate to the Dolphin-x64 folder `C:\Dolphin\Dolphin-x64`
+- Run `Dolphin.exe` by double clicking
+- Double click to set games directory to folder where MHTri is located `C:\Dolphin\Games\`
 - Ensure MHTri shows up as a selectable game  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/dolphin-tri-noPS.PNG)
 
 
 ## Setting up the MHTri Server
 Once you have added MHTri as a game to your dolphin emulator, its time to establish a connection to the private server
-- Download and unzip `MH3SP-Riivolution.zip` to desired location, I used the same folder as my games folder (C:\Dolphin\Games\)
+- Download and unzip `MH3SP-Riivolution.zip` to desired location, I used the same folder as my games folder `C:\Dolphin\Games\`
 - Run `Dolphin.exe` to open the Dolphin Emulator
 - Right click on Monster Hunter Tri
-- Select "Start with Riivolution Patches..."  
+- Select `Start with Riivolution Patches...`  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/open-rii.PNG)
-- Select "Open Riivolution XML..." at the bottom
-- Navigate to the folder where you unzipped the file (C:\Dolphin\Games\riivolution\)
+- Select `Open Riivolution XML...` at the bottom
+- Navigate to the folder where you unzipped the file `C:\Dolphin\Games\riivolution\`
 - Select `MH3SP.xml`  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/save-preset.PNG)
-- Select "Save as Preset..." at the bottom
+- Select `Save as Preset...` at the bottom
 - Name it something like "MH3SP SERVER" and save
-- Close out of "Start with Riivolution Patches..." window DONT CLICK START and ensure a new game appears with the title you entered
-- Everytime you want to launch the game to play on LocLac servers, select "MH3SP SERVER"  
+- Close out of `Start with Riivolution Patches...` window. **DONT CLICK START.** Ensure a new game appears with the title you entered
+- Everytime you want to launch the game, select `MH3SP SERVER`. It allows you to play both Online and Offline  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/mh3sp-server.PNG)
 
 ## Using a DS4 Controller
 Included in the Google Drive is a configuration file for the controller layout I use titled `MH Tri.ini`  
 This is intended to be used with a DualShock 4 (PS4) controller and mimics the button layout of the classic Wii controller.  
 Place this file in the path `C:\Users\(user)\Documents\Dolphin Emulator\Config\Profiles\Wiimote`  
-If some of the folders do not appear (namely `Profiles` and `Wiimote`) go ahead and create them.
+If some of the folders do not appear (namely `Profiles` and `Wiimote`), go ahead and create them.
 To use this config:
 - Open up the Dolphin Emulator
-- Select "Controllers" at the top right
-- Select "Configure" under the Wii Remotes -> Wii Remote 1
+- Select `Controllers` at the top right
+- Select `Configure` under the Wii Remotes -> Wii Remote 1
 - With the controller plugged in, select the Profile dropdown and select `MH Tri`
-- Select "Load" and your controller should be working perfectly
+- Select `Load` and your controller should be working perfectly
 
 ## Essential-ish Configurations and Codes
 
 ### Graphics Improvements
-In it's default configuration, Monster Hunter Tri leaves much to be desired aesthetically. Below are a
-few changes that will bolster the graphics of the game.
+In it's default configuration, Monster Hunter Tri leaves much to be desired aesthetically. Below are a few changes that will bolster the graphics of the game.  
 
 So, let's take the game from this:  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/flfr9%20ss%20for%20comp.PNG)
@@ -66,20 +65,22 @@ And make the Sandy Plains actually playable
 First and foremost, change the graphics engine to Vulkan. To do this:
 - Open Dolphin Emulator -> Graphics -> General -> Select Vulkan from `Backend` dropdown
 - Ensure your aspect ratio is set to `Force 16:9`
-- Next, update the settings on the `Enhancements` tab to match the image shown below. The "Depth" and "Convergence" values are the default values, so you shouldn't have to change them.  
+
+Next, update the settings on the `Enhancements` tab to match the image shown below. The "Depth" and "Convergence" values are the default values, so you shouldn't have to change them.  
 ![](https://github.com/fawful514/MHTRI/blob/main/screenshots/dolphin%20graphics2.PNG)
 
 Now, enable cheats. To do this:
 - Select `Config` in the Dolphin Emulator -> Ensure `Enable Cheats` is ticked
 - I found that un-ticking `Enable Dual Core (speedup)` improves the smoothness of the game  
 
-With cheats enabled, it is time to install the cheats. To do this:
+With cheats enabled, it is time to install the patch. To do this:
 - Right-click `MH3SP SERVER` in the Dolphin Emulator games list and select `Properties`
 - Under the `Patches` tab, ensure `Bloom OFF` is checked
 
 ### Quality of Life Codes
 This section will walk you through how to add and enable Gecko Codes. If you change your mind in the future, simply close out of the current game and un-tick any of the added Gecko Codes you no longer want.  
 The following is a code that will allow you to eat after you have accepted a quest in LocLac (City):
+- Open the `Properties` window for `MH3SP SERVER` just as in the patch step  
 - Under the `Gecko Codes` tab, select `Add New Code...`
 - Name it "Eat After Quest", paste the following into the `Code:` section, and hit `Save`:
   ```
